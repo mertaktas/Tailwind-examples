@@ -10,6 +10,10 @@ module.exports = {
        'light': '#EFEFEF',
        'lightHover': '#d7d7d7',
        'muted': '#717171'
+      },
+      fontSize: {
+        'xxs': ['8px'],
+        'xxxs': ['6px'],
       }
     },
   },
