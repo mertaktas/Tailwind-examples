@@ -1,15 +1,14 @@
 <template>
-  <div class="flex flex-col justify-center items-center w-full">
-    <router-link to="pinterest">Pinterest</router-link>
-    <ProfileCard />
+  <div class="w-full">
+    <BlogSection />
   </div>
 </template>
 
 <script>
-import ProfileCard from '@/components/ProfileCard.vue'
+import BlogSection from '@/components/BlogSection.vue'
 export default {
   components: {
-    ProfileCard,
+    BlogSection,
   }
 
 }
