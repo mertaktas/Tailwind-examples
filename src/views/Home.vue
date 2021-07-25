@@ -1,14 +1,14 @@
 <template>
   <div class="w-full flex items-center justify-center bg-teal-100 p-8">
-    <InfoCard />
+    <ContactForm />
   </div>
 </template>
 
 <script>
-import InfoCard from '@/components/InfoCard.vue'
+import ContactForm from '@/components/ContactForm.vue'
 export default {
   components: {
-    InfoCard,
+    ContactForm,
   }
 
 }
