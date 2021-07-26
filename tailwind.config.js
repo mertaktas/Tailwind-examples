@@ -14,6 +14,7 @@ module.exports = {
        'muted': '#717171',
         teal: colors.teal,
         blueGray: colors.blueGray,
+        pink: colors.pink,
       },
       fontSize: {
         'xxs': ['8px'],

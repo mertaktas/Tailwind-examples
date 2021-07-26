@@ -11,6 +11,11 @@ const routes = [
       name: 'Pinterest',
       component: () => import("../views/Pinterest.vue"),
     },
+    {
+      path: '/designdaily',
+      name: 'UiDesignDaily',
+      component: () => import("../views/UiDesignDaily.vue"),
+    },
 
 ];
 
