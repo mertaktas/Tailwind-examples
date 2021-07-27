@@ -15,6 +15,7 @@ module.exports = {
         teal: colors.teal,
         blueGray: colors.blueGray,
         pink: colors.pink,
+        lime: colors.lime,
       },
       fontSize: {
         'xxs': ['8px'],

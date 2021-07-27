@@ -1,19 +1,16 @@
 <template>
   <div class="w-full min-h-screen h-full flex flex-wrap items-center justify-center bg-teal-100 p-8">
-    <EventCard />
+    <Footer />
   </div>
-</template>
 
+</template>
 <script>
-import EventCard from '@/components/EventCard.vue'
+import Footer from "@/components/Footer.vue"
 export default {
   components: {
-    EventCard,
+    Footer,
   }
-
 }
 </script>
-
 <style>
-
 </style>
