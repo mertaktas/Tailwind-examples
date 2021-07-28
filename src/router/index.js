@@ -16,6 +16,11 @@ const routes = [
       name: 'UiDesignDaily',
       component: () => import("../views/UiDesignDaily.vue"),
     },
+    {
+      path: '/twitter',
+      name: 'Twitter',
+      component: () => import("../views/Twitter.vue"),
+    },
 
 ];
 
