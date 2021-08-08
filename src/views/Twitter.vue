@@ -1,11 +1,11 @@
 <template>
-  <div class="flex h-screen w-full">
+  <div class="flex h-screen w-full justify-center">
     <!-- Main -->
-    <div class="w-full relative max-w-xl m-auto lg:m-0 lg:max-w-5xl">
+    <div class="w-full relative max-w-xl m-auto lg:m-0 lg:max-w-5xl xl:max-w-7xl">
       <!-- Main Header -->
-      <div
-        class="
+      <div class="
           lg:max-w-5xl
+          xl:max-w-7xl
           max-w-xl
           fixed
           top-0
@@ -19,24 +19,65 @@
           justify-between
           w-full
           border-b-2 border-gray-100
-        "
-      >
-        <div class="flex items-center">
-          <img
-            class="w-8 h-8 overflow-hidden rounded-full border border-gray-100"
-            src="@/assets/twitter/profile.png"
-            alt=""
-            srcset=""
-          />
-          <h2 class="pl-6 text-lg font-black text-black">Home Page</h2>
+          xl:border-none
+        ">
+          <div class="hidden xl:block w-2/12 pl-4">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="w-8"><g><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></g></svg>
+          </div>
+        <div class="flex items-center justify-between w-full xl:max-w-xl xl:pl-8 xl:w-6/12">
+          <div class="flex items-center">
+            <img class="
+                xl:hidden
+                w-8
+                h-8
+                overflow-hidden
+                rounded-full
+                border border-gray-100
+              " src="@/assets/twitter/profile.png" alt="" srcset="" />
+            <h2 class="pl-6 text-lg font-black text-black">Home Page</h2>
+          </div>
+          <img class="w-6" src="@/assets/twitter/star.svg" alt="" srcset="" />
         </div>
-        <img class="w-6" src="@/assets/twitter/star.svg" alt="" srcset="" />
+        <div class="hidden xl:block w-4/12">
+          <div class="relative px-4 pr-8">
+            <input class="w-full p-2 pl-8 rounded-full focus:outline-none bg-gray-100" type="text" placeholder="Search Twitter">
+            <img class="w-4 absolute top-3 left-6" src="@/assets/twitter/search.svg" alt="" srcset="" />
+          </div>
+        </div>
       </div>
       <!-- Post List -->
-      <div class="lg:max-w-vw lg:mx-8 m-auto flex flex-row mt-12">
-        <div
-          class="
+      <div class="lg:max-w-vw xl:max-w-full lg:mx-8 m-auto flex flex-row mt-12">
+        <div class="xl:w-2/12 hidden xl:block">
+          <div>
+            <div class="flex items-center py-4 px-2">
+              <img class="w-6" src="@/assets/twitter/home.svg" alt="" srcset="" />
+              <h2 class="font-black text-blue-600 text-xl pl-4">Home</h2>
+            </div>
+            <div class="flex items-center py-4 px-2">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6"><g><path d="M21 7.337h-3.93l.372-4.272c.036-.412-.27-.775-.682-.812-.417-.03-.776.27-.812.683l-.383 4.4h-6.32l.37-4.27c.037-.413-.27-.776-.68-.813-.42-.03-.777.27-.813.683l-.382 4.4H3.782c-.414 0-.75.337-.75.75s.336.75.75.75H7.61l-.55 6.327H3c-.414 0-.75.336-.75.75s.336.75.75.75h3.93l-.372 4.272c-.036.412.27.775.682.812l.066.003c.385 0 .712-.295.746-.686l.383-4.4h6.32l-.37 4.27c-.036.413.27.776.682.813l.066.003c.385 0 .712-.295.746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z"></path></g></svg>
+              <h2 class="font-black text-xl pl-4">Explore</h2>
+            </div>
+            <div class="flex items-center py-4 px-2">
+              <img class="w-6" src="@/assets/twitter/notification.svg" alt="" srcset="" />
+              <h2 class="font-black text-xl pl-4">Notifications</h2>
+            </div>
+            <div class="flex items-center py-4 px-2">
+              <img class="w-6" src="@/assets/twitter/message.svg" alt="" srcset="" />
+              <h2 class="font-black text-xl pl-4">Messages</h2>
+            </div>
+            <div class="flex items-center py-4 px-2">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6"><g><path d="M12 11.816c1.355 0 2.872-.15 3.84-1.256.814-.93 1.078-2.368.806-4.392-.38-2.825-2.117-4.512-4.646-4.512S7.734 3.343 7.354 6.17c-.272 2.022-.008 3.46.806 4.39.968 1.107 2.485 1.256 3.84 1.256zM8.84 6.368c.162-1.2.787-3.212 3.16-3.212s2.998 2.013 3.16 3.212c.207 1.55.057 2.627-.45 3.205-.455.52-1.266.743-2.71.743s-2.255-.223-2.71-.743c-.507-.578-.657-1.656-.45-3.205zm11.44 12.868c-.877-3.526-4.282-5.99-8.28-5.99s-7.403 2.464-8.28 5.99c-.172.692-.028 1.4.395 1.94.408.52 1.04.82 1.733.82h12.304c.693 0 1.325-.3 1.733-.82.424-.54.567-1.247.394-1.94zm-1.576 1.016c-.126.16-.316.246-.552.246H5.848c-.235 0-.426-.085-.552-.246-.137-.174-.18-.412-.12-.654.71-2.855 3.517-4.85 6.824-4.85s6.114 1.994 6.824 4.85c.06.242.017.48-.12.654z"></path></g></svg>
+              <h2 class="font-black text-xl pl-4">Profile</h2>
+            </div>
+            <div class="flex items-center py-4 px-2">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6"><g><circle cx="17" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="7" cy="12" r="1.5"></circle><path d="M12 22.75C6.072 22.75 1.25 17.928 1.25 12S6.072 1.25 12 1.25 22.75 6.072 22.75 12 17.928 22.75 12 22.75zm0-20C6.9 2.75 2.75 6.9 2.75 12S6.9 21.25 12 21.25s9.25-4.15 9.25-9.25S17.1 2.75 12 2.75z"></path></g></svg>
+              <h2 class="font-black text-xl pl-4">More</h2>
+            </div>
+          </div>
+        </div>
+        <div class="
             lg:w-3/5
+            xl:w-6/12
             lg:max-w-2xl
             max-w-xl
             w-full
@@ -45,27 +86,17 @@
             pb-16
             px-4
             border-b-2 border-gray-100 border-r border-l
-          "
-        >
+          ">
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 rounded-full border border-gray-100"
-                src="@/assets/twitter/elon.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 rounded-full border border-gray-100" src="@/assets/twitter/elon.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
                 <h2 class="text-black font-extrabold text-sm">Martha Craig</h2>
                 <span class="pl-1">@craig_love · 12h</span>
               </div>
-              <p class="text-xs leading-5">
-                UXR/UX: You can only bring one item to a remote island to assist
-                your research of native use of tools and usability. What do you
-                bring? #TellMeAboutYou
-              </p>
+              <p class="text-xs leading-5"> UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou </p>
               <div class="flex items-center justify-between pt-2">
                 <button class="flex items-center">
                   <img src="@/assets/twitter/comment.svg" alt="" srcset="" />
@@ -87,12 +118,7 @@
           </div>
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 ov rounded-full border border-gray-100"
-                src="@/assets/twitter/kevin.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 ov rounded-full border border-gray-100" src="@/assets/twitter/kevin.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
@@ -121,27 +147,14 @@
           </div>
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 ov rounded-full border border-gray-100"
-                src="@/assets/twitter/monk.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 ov rounded-full border border-gray-100" src="@/assets/twitter/monk.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
-                <h2 class="text-black font-extrabold text-sm">
-                  Tabitha Potter
-                </h2>
+                <h2 class="text-black font-extrabold text-sm"> Tabitha Potter </h2>
                 <span class="pl-1">@mis_potter ·14h</span>
               </div>
-              <p class="text-xs leading-5">
-                Kobe’s passing is really sticking w/ me in a way I didn’t
-                expect. He was an icon, the kind of person who wouldn’t die this
-                way. My wife compared it to Princess Di’s accident. But the end
-                can happen for anyone at any time, & I can’t help but think of
-                anything else lately.
-              </p>
+              <p class="text-xs leading-5"> Kobe’s passing is really sticking w/ me in a way I didn’t expect. He was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident. But the end can happen for anyone at any time, & I can’t help but think of anything else lately. </p>
               <div class="flex items-center justify-between pt-2">
                 <button class="flex items-center">
                   <img src="@/assets/twitter/comment.svg" alt="" srcset="" />
@@ -163,23 +176,14 @@
           </div>
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 ov rounded-full border border-gray-100"
-                src="@/assets/twitter/elon.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 ov rounded-full border border-gray-100" src="@/assets/twitter/elon.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
                 <h2 class="text-black font-extrabold text-sm">Martha Craig</h2>
                 <span class="pl-1">@craig_love · 12h</span>
               </div>
-              <p class="text-xs leading-5">
-                UXR/UX: You can only bring one item to a remote island to assist
-                your research of native use of tools and usability. What do you
-                bring? #TellMeAboutYou
-              </p>
+              <p class="text-xs leading-5"> UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou </p>
               <div class="flex items-center justify-between pt-2">
                 <button class="flex items-center">
                   <img src="@/assets/twitter/comment.svg" alt="" srcset="" />
@@ -201,12 +205,7 @@
           </div>
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 ov rounded-full border border-gray-100"
-                src="@/assets/twitter/kevin.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 ov rounded-full border border-gray-100" src="@/assets/twitter/kevin.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
@@ -235,27 +234,14 @@
           </div>
           <div class="flex py-2">
             <div class="w-1/5 lg:flex justify-center">
-              <img
-                class="w-12 h-12 ov rounded-full border border-gray-100"
-                src="@/assets/twitter/monk.jpg"
-                alt=""
-                srcset=""
-              />
+              <img class="w-12 h-12 ov rounded-full border border-gray-100" src="@/assets/twitter/monk.jpg" alt="" srcset="" />
             </div>
             <div class="w-full">
               <div class="flex items-center">
-                <h2 class="text-black font-extrabold text-sm">
-                  Tabitha Potter
-                </h2>
+                <h2 class="text-black font-extrabold text-sm"> Tabitha Potter </h2>
                 <span class="pl-1">@mis_potter ·14h</span>
               </div>
-              <p class="text-xs leading-5">
-                Kobe’s passing is really sticking w/ me in a way I didn’t
-                expect. He was an icon, the kind of person who wouldn’t die this
-                way. My wife compared it to Princess Di’s accident. But the end
-                can happen for anyone at any time, & I can’t help but think of
-                anything else lately.
-              </p>
+              <p class="text-xs leading-5"> Kobe’s passing is really sticking w/ me in a way I didn’t expect. He was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident. But the end can happen for anyone at any time, & I can’t help but think of anything else lately. </p>
               <div class="flex items-center justify-between pt-2">
                 <button class="flex items-center">
                   <img src="@/assets/twitter/comment.svg" alt="" srcset="" />
@@ -276,40 +262,24 @@
             </div>
           </div>
         </div>
-        <div class="hidden lg:block lg:w-2/5 px-5 py-3 pb-16">
+        <div class="hidden lg:block lg:w-3/5 xl:w-4/12 px-5 py-3 pb-16">
           <div class="bg-gray-50 mb-4 rounded-lg">
-            <div
-              class="px-4 py-3 flex justify-between border-b border-gray-100"
-            >
+            <div class="px-4 py-3 flex justify-between border-b border-gray-100">
               <h2 class="text-black font-black text-xl w-60">Trends for you</h2>
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                class="fill-blue w-6 h-6"
-              >
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-blue w-6 h-6">
                 <g>
-                  <path
-                    d="M12 8.21c-2.09 0-3.79 1.7-3.79 3.79s1.7 3.79 3.79 3.79 3.79-1.7 3.79-3.79-1.7-3.79-3.79-3.79zm0 6.08c-1.262 0-2.29-1.026-2.29-2.29S10.74 9.71 12 9.71s2.29 1.026 2.29 2.29-1.028 2.29-2.29 2.29z"
-                  ></path>
-                  <path
-                    d="M12.36 22.375h-.722c-1.183 0-2.154-.888-2.262-2.064l-.014-.147c-.025-.287-.207-.533-.472-.644-.286-.12-.582-.065-.798.115l-.116.097c-.868.725-2.253.663-3.06-.14l-.51-.51c-.836-.84-.896-2.154-.14-3.06l.098-.118c.186-.222.23-.523.122-.787-.11-.272-.358-.454-.646-.48l-.15-.014c-1.18-.107-2.067-1.08-2.067-2.262v-.722c0-1.183.888-2.154 2.064-2.262l.156-.014c.285-.025.53-.207.642-.473.11-.27.065-.573-.12-.795l-.094-.116c-.757-.908-.698-2.223.137-3.06l.512-.512c.804-.804 2.188-.865 3.06-.14l.116.098c.218.184.528.23.79.122.27-.112.452-.358.477-.643l.014-.153c.107-1.18 1.08-2.066 2.262-2.066h.722c1.183 0 2.154.888 2.262 2.064l.014.156c.025.285.206.53.472.64.277.117.58.062.794-.117l.12-.102c.867-.723 2.254-.662 3.06.14l.51.512c.836.838.896 2.153.14 3.06l-.1.118c-.188.22-.234.522-.123.788.112.27.36.45.646.478l.152.014c1.18.107 2.067 1.08 2.067 2.262v.723c0 1.183-.888 2.154-2.064 2.262l-.155.014c-.284.024-.53.205-.64.47-.113.272-.067.574.117.795l.1.12c.756.905.696 2.22-.14 3.06l-.51.51c-.807.804-2.19.864-3.06.14l-.115-.096c-.217-.183-.53-.23-.79-.122-.273.114-.455.36-.48.646l-.014.15c-.107 1.173-1.08 2.06-2.262 2.06zm-3.773-4.42c.3 0 .593.06.87.175.79.328 1.324 1.054 1.4 1.896l.014.147c.037.4.367.7.77.7h.722c.4 0 .73-.3.768-.7l.014-.148c.076-.842.61-1.567 1.392-1.892.793-.33 1.696-.182 2.333.35l.113.094c.178.148.366.18.493.18.206 0 .4-.08.546-.227l.51-.51c.284-.284.305-.73.048-1.038l-.1-.12c-.542-.65-.677-1.54-.352-2.323.326-.79 1.052-1.32 1.894-1.397l.155-.014c.397-.037.7-.367.7-.77v-.722c0-.4-.303-.73-.702-.768l-.152-.014c-.846-.078-1.57-.61-1.895-1.393-.326-.788-.19-1.678.353-2.327l.1-.118c.257-.31.236-.756-.048-1.04l-.51-.51c-.146-.147-.34-.227-.546-.227-.127 0-.315.032-.492.18l-.12.1c-.634.528-1.55.67-2.322.354-.788-.327-1.32-1.052-1.397-1.896l-.014-.155c-.035-.397-.365-.7-.767-.7h-.723c-.4 0-.73.303-.768.702l-.014.152c-.076.843-.608 1.568-1.39 1.893-.787.326-1.693.183-2.33-.35l-.118-.096c-.18-.15-.368-.18-.495-.18-.206 0-.4.08-.546.226l-.512.51c-.282.284-.303.73-.046 1.038l.1.118c.54.653.677 1.544.352 2.325-.327.788-1.052 1.32-1.895 1.397l-.156.014c-.397.037-.7.367-.7.77v.722c0 .4.303.73.702.768l.15.014c.848.078 1.573.612 1.897 1.396.325.786.19 1.675-.353 2.325l-.096.115c-.26.31-.238.756.046 1.04l.51.51c.146.147.34.227.546.227.127 0 .315-.03.492-.18l.116-.096c.406-.336.923-.524 1.453-.524z"
-                  ></path>
+                  <path d="M12 8.21c-2.09 0-3.79 1.7-3.79 3.79s1.7 3.79 3.79 3.79 3.79-1.7 3.79-3.79-1.7-3.79-3.79-3.79zm0 6.08c-1.262 0-2.29-1.026-2.29-2.29S10.74 9.71 12 9.71s2.29 1.026 2.29 2.29-1.028 2.29-2.29 2.29z"></path>
+                  <path d="M12.36 22.375h-.722c-1.183 0-2.154-.888-2.262-2.064l-.014-.147c-.025-.287-.207-.533-.472-.644-.286-.12-.582-.065-.798.115l-.116.097c-.868.725-2.253.663-3.06-.14l-.51-.51c-.836-.84-.896-2.154-.14-3.06l.098-.118c.186-.222.23-.523.122-.787-.11-.272-.358-.454-.646-.48l-.15-.014c-1.18-.107-2.067-1.08-2.067-2.262v-.722c0-1.183.888-2.154 2.064-2.262l.156-.014c.285-.025.53-.207.642-.473.11-.27.065-.573-.12-.795l-.094-.116c-.757-.908-.698-2.223.137-3.06l.512-.512c.804-.804 2.188-.865 3.06-.14l.116.098c.218.184.528.23.79.122.27-.112.452-.358.477-.643l.014-.153c.107-1.18 1.08-2.066 2.262-2.066h.722c1.183 0 2.154.888 2.262 2.064l.014.156c.025.285.206.53.472.64.277.117.58.062.794-.117l.12-.102c.867-.723 2.254-.662 3.06.14l.51.512c.836.838.896 2.153.14 3.06l-.1.118c-.188.22-.234.522-.123.788.112.27.36.45.646.478l.152.014c1.18.107 2.067 1.08 2.067 2.262v.723c0 1.183-.888 2.154-2.064 2.262l-.155.014c-.284.024-.53.205-.64.47-.113.272-.067.574.117.795l.1.12c.756.905.696 2.22-.14 3.06l-.51.51c-.807.804-2.19.864-3.06.14l-.115-.096c-.217-.183-.53-.23-.79-.122-.273.114-.455.36-.48.646l-.014.15c-.107 1.173-1.08 2.06-2.262 2.06zm-3.773-4.42c.3 0 .593.06.87.175.79.328 1.324 1.054 1.4 1.896l.014.147c.037.4.367.7.77.7h.722c.4 0 .73-.3.768-.7l.014-.148c.076-.842.61-1.567 1.392-1.892.793-.33 1.696-.182 2.333.35l.113.094c.178.148.366.18.493.18.206 0 .4-.08.546-.227l.51-.51c.284-.284.305-.73.048-1.038l-.1-.12c-.542-.65-.677-1.54-.352-2.323.326-.79 1.052-1.32 1.894-1.397l.155-.014c.397-.037.7-.367.7-.77v-.722c0-.4-.303-.73-.702-.768l-.152-.014c-.846-.078-1.57-.61-1.895-1.393-.326-.788-.19-1.678.353-2.327l.1-.118c.257-.31.236-.756-.048-1.04l-.51-.51c-.146-.147-.34-.227-.546-.227-.127 0-.315.032-.492.18l-.12.1c-.634.528-1.55.67-2.322.354-.788-.327-1.32-1.052-1.397-1.896l-.014-.155c-.035-.397-.365-.7-.767-.7h-.723c-.4 0-.73.303-.768.702l-.014.152c-.076.843-.608 1.568-1.39 1.893-.787.326-1.693.183-2.33-.35l-.118-.096c-.18-.15-.368-.18-.495-.18-.206 0-.4.08-.546.226l-.512.51c-.282.284-.303.73-.046 1.038l.1.118c.54.653.677 1.544.352 2.325-.327.788-1.052 1.32-1.895 1.397l-.156.014c-.397.037-.7.367-.7.77v.722c0 .4.303.73.702.768l.15.014c.848.078 1.573.612 1.897 1.396.325.786.19 1.675-.353 2.325l-.096.115c-.26.31-.238.756.046 1.04l.51.51c.146.147.34.227.546.227.127 0 .315-.03.492-.18l.116-.096c.406-.336.923-.524 1.453-.524z"></path>
                 </g>
               </svg>
             </div>
             <!-- Journal List -->
             <div>
               <div class="px-4 py-3 relative border-b border-gray-100">
-                <h4 class="text-gray-600 font-semibold text-xs">
-                  Football · Trending
-                </h4>
+                <h4 class="text-gray-600 font-semibold text-xs"> Football · Trending </h4>
                 <h2 class="text-black font-extrabold text-md">Sörloth</h2>
                 <p class="text-gray-600 font-semibold text-xs">5.443 Tweet</p>
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  class="w-5 h-5 absolute top-2 right-4"
-                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 absolute top-2 right-4">
                   <g>
                     <circle cx="5" cy="12" r="2"></circle>
                     <circle cx="12" cy="12" r="2"></circle>
@@ -318,16 +288,10 @@
                 </svg>
               </div>
               <div class="px-4 py-3 relative border-b border-gray-100">
-                <h4 class="text-gray-600 font-semibold text-xs">
-                  Football · Trending
-                </h4>
+                <h4 class="text-gray-600 font-semibold text-xs"> Football · Trending </h4>
                 <h2 class="text-black font-extrabold text-md">Sörloth</h2>
                 <p class="text-gray-600 font-semibold text-xs">5.443 Tweet</p>
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  class="w-5 h-5 absolute top-2 right-4"
-                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 absolute top-2 right-4">
                   <g>
                     <circle cx="5" cy="12" r="2"></circle>
                     <circle cx="12" cy="12" r="2"></circle>
@@ -336,16 +300,10 @@
                 </svg>
               </div>
               <div class="px-4 py-3 relative border-b border-gray-100">
-                <h4 class="text-gray-600 font-semibold text-xs">
-                  Football · Trending
-                </h4>
+                <h4 class="text-gray-600 font-semibold text-xs"> Football · Trending </h4>
                 <h2 class="text-black font-extrabold text-md">Sörloth</h2>
                 <p class="text-gray-600 font-semibold text-xs">5.443 Tweet</p>
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  class="w-5 h-5 absolute top-2 right-4"
-                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 absolute top-2 right-4">
                   <g>
                     <circle cx="5" cy="12" r="2"></circle>
                     <circle cx="12" cy="12" r="2"></circle>
@@ -354,16 +312,10 @@
                 </svg>
               </div>
               <div class="px-4 py-3 relative border-b border-gray-100">
-                <h4 class="text-gray-600 font-semibold text-xs">
-                  Football · Trending
-                </h4>
+                <h4 class="text-gray-600 font-semibold text-xs"> Football · Trending </h4>
                 <h2 class="text-black font-extrabold text-md">Sörloth</h2>
                 <p class="text-gray-600 font-semibold text-xs">5.443 Tweet</p>
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  class="w-5 h-5 absolute top-2 right-4"
-                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="w-5 h-5 absolute top-2 right-4">
                   <g>
                     <circle cx="5" cy="12" r="2"></circle>
                     <circle cx="12" cy="12" r="2"></circle>
@@ -377,37 +329,28 @@
             </div>
           </div>
           <div class="bg-gray-50 rounded-lg">
-            <div
-              class="px-4 py-3 flex justify-between border-b border-gray-100"
-            >
+            <div class="px-4 py-3 flex justify-between border-b border-gray-100">
               <h2 class="text-black font-black text-xl w-60">Who to follow</h2>
             </div>
             <!-- Journal List -->
             <div>
-              <div
-                class="
+              <div class="
                   px-4
                   py-3
                   flex
                   justify-between
                   items-center
                   border-b border-gray-100
-                "
-              >
+                ">
                 <div class="flex">
-                  <img
-                    class="w-12 h-12 rounded-full border mr-3 border-gray-100"
-                    src="@/assets/twitter/monk.jpg"
-                    alt=""
-                  />
+                  <img class="w-12 h-12 rounded-full border mr-3 border-gray-100" src="@/assets/twitter/monk.jpg" alt="" />
                   <div>
                     <h4>Bla bla bla</h4>
                     <p>@blalaba</p>
                   </div>
                 </div>
                 <div>
-                  <a
-                    class="
+                  <a class="
                       px-4
                       py-1
                       text-blue-400
@@ -415,36 +358,26 @@
                       text-md
                       border border-blue-500
                       rounded-full
-                    "
-                    href=""
-                    >Follow</a
-                  >
+                    " href="">Follow</a>
                 </div>
               </div>
-              <div
-                class="
+              <div class="
                   px-4
                   py-3
                   flex
                   justify-between
                   items-center
                   border-b border-gray-100
-                "
-              >
+                ">
                 <div class="flex">
-                  <img
-                    class="w-12 h-12 rounded-full border mr-3 border-gray-100"
-                    src="@/assets/twitter/monk.jpg"
-                    alt=""
-                  />
+                  <img class="w-12 h-12 rounded-full border mr-3 border-gray-100" src="@/assets/twitter/monk.jpg" alt="" />
                   <div>
                     <h4>Bla bla bla</h4>
                     <p>@blalaba</p>
                   </div>
                 </div>
                 <div>
-                  <a
-                    class="
+                  <a class="
                       px-4
                       py-1
                       text-blue-400
@@ -452,36 +385,26 @@
                       text-md
                       border border-blue-500
                       rounded-full
-                    "
-                    href=""
-                    >Follow</a
-                  >
+                    " href="">Follow</a>
                 </div>
               </div>
-              <div
-                class="
+              <div class="
                   px-4
                   py-3
                   flex
                   justify-between
                   items-center
                   border-b border-gray-100
-                "
-              >
+                ">
                 <div class="flex">
-                  <img
-                    class="w-12 h-12 rounded-full border mr-3 border-gray-100"
-                    src="@/assets/twitter/monk.jpg"
-                    alt=""
-                  />
+                  <img class="w-12 h-12 rounded-full border mr-3 border-gray-100" src="@/assets/twitter/monk.jpg" alt="" />
                   <div>
                     <h4>Bla bla bla</h4>
                     <p>@blalaba</p>
                   </div>
                 </div>
                 <div>
-                  <a
-                    class="
+                  <a class="
                       px-4
                       py-1
                       text-blue-400
@@ -489,10 +412,7 @@
                       text-md
                       border border-blue-500
                       rounded-full
-                    "
-                    href=""
-                    >Follow</a
-                  >
+                    " href="">Follow</a>
                 </div>
               </div>
               <div class="px-4 py-3">
@@ -502,8 +422,8 @@
           </div>
         </div>
       </div>
-      <div
-        class="
+      <div class="
+      xl:hidden
           lg:m-auto
           lg:max-w-5xl
           max-w-xl
@@ -517,25 +437,16 @@
           px-8
           lg:px-32
           py-4
-        "
-      >
+        ">
         <img class="w-6" src="@/assets/twitter/home.svg" alt="" srcset="" />
         <img class="w-5" src="@/assets/twitter/search.svg" alt="" srcset="" />
-        <img
-          class="w-5"
-          src="@/assets/twitter/notification.svg"
-          alt=""
-          srcset=""
-        />
+        <img class="w-5" src="@/assets/twitter/notification.svg" alt="" srcset="" />
         <img class="w-5" src="@/assets/twitter/message.svg" alt="" srcset="" />
       </div>
     </div>
   </div>
 </template>
-
 <script>
-export default {};
+  export default {};
 </script>
-
-<style>
-</style>
+<style></style>
