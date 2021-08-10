@@ -147,7 +147,7 @@
               </div>
               
           </div>
-          <div class="flex py-2">
+          <div class="flex py-2 pt-4">
             <div class="w-1/5 lg:flex justify-center">
               <img class="w-12 h-12 rounded-full border border-gray-100" src="@/assets/twitter/elon.jpg" alt="" srcset="" />
             </div>
