@@ -8,7 +8,7 @@
             {{ item.name }}
           </button>
       </div>
-      <div class="flex-grow relative">
+      <div class="flex-grow relative invisible w-0 md:w-auto md:visible">
               <span class="material-icons absolute mt-3 ml-3 text-muted">search</span>
               <input type="text" placeholder="Search" class="rounded-full bg-light py-3 pl-10 pr-3 w-full hover:bg-lightHover">
       </div>
