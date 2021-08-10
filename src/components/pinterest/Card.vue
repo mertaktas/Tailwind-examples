@@ -1,8 +1,8 @@
 <template>
   <div @mouseover="hover = true" @mouseout="hover = false" class="relative">
-      <img class="rounded-lg"  :src="require(`@/assets/pinterest/${src}`)">
-      <div v-if="hover" class="absolute bg-dark opacity-50 inset-0 w-full h-full rounded-lg"></div>
-      <div v-if="hover" class="absolute top-0 w-full h-full flex flex-col justify-between p-3">
+      <img class="rounded-lg w-full"  :src="`${src}`">
+      <div v-if="hover" class="opacity-50 absolute bg-dark inset-0 w-full h-full rounded-lg"></div>
+      <div class="opacity-0 hover:opacity-100 transition-all flex absolute top-0 w-full h-full flex-col justify-between p-3">
           <div class="flex items-center justify-between">
               <button class="flex items-center" type="button" name="button">
                   <p class="font-semibold text-white"> {{ board }} </p>
