@@ -1,8 +1,8 @@
 <template lang="html">
     <div class="">
         <TopNav class="max-w-6xl mx-auto" />
-        <div class="box-border max-w-6xl mx-auto masonry-2 sm:masonry-3 md:masonry-3 lg:masonry-4 xl:masonry-5 before:box-inherit after:box-inherit">
-            <div v-for="(card, index) in cards" :key="index" class="px-5 py-2 rounded-lg break-inside mx-auto w-full md:w-60">
+        <div class="box-border max-w-6xl mx-auto xs:masonry sm:masonry-2 md:masonry-3 lg:masonry-4 xl:masonry-5 before:box-inherit after:box-inherit">
+            <div v-for="(card, index) in cards" :key="index" class="px-5 py-2 rounded-lg break-inside mx-auto  w-full md:w-60">
                 <Card class="max-w-lg mx-auto" :src="`${card.src}`" :board="`${card.recommended}`" />
                 <div class="text-sm leading-tight pt-2 max-w-md mx-auto">
                     <p class="font-bold"> {{ card.title }} </p>

@@ -1,6 +1,6 @@
 <template>
   <div @mouseover="hover = true" @mouseout="hover = false" class="relative">
-      <img class="rounded-lg w-full"  :src="`${src}`">
+      <img class="rounded-lg w-full max-h-96"  :src="`${src}`">
       <div v-if="hover" class="opacity-50 absolute bg-dark inset-0 w-full h-full rounded-lg"></div>
       <div class="opacity-0 hover:opacity-100 transition-all flex absolute top-0 w-full h-full flex-col justify-between p-3">
           <div class="flex items-center justify-between">
