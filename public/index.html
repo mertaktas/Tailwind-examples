@@ -8,12 +8,28 @@
     rel="stylesheet">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <script>
+      // vanilla JS
+      // init with element
+      var grid = document.querySelector('.grid');
+      var msnry = new Masonry( grid, {
+        // options...
+        itemSelector: '.grid-item',
+        columnWidth: 200
+      });
+
+      // init with selector
+      var msnry = new Masonry( '.grid', {
+        // options...
+      });
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
