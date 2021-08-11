@@ -19,7 +19,7 @@
           </div>
           <div class="leading-tight">
             <div>
-              <a href="/pinterest" target="_blank" class="text-lg font-semibold hover:text-gray-600">Pinterest</a>
+              <a href="/pinterest" target="_blank" class="text-lg font-semibold hover:text-gray-600">Pinterest Clone</a>
             </div>
           </div>
         </div> <!-- end item pinterest -->
@@ -32,7 +32,7 @@
           </div>
           <div class="leading-tight">
             <div>
-              <a href="/twitter" target="_blank" class="text-lg font-semibold hover:text-gray-600">Twitter</a>
+              <a href="/twitter" target="_blank" class="text-lg font-semibold hover:text-gray-600">Twitter Clone</a>
             </div>
           </div>
         </div> <!-- end item twitter -->
@@ -47,7 +47,7 @@
           </div>
           <div class="leading-tight">
             <div>
-              <a href="/designdaily" target="_blank" class="text-lg font-semibold hover:text-gray-600">Ui Design Daily</a>
+              <a href="/designdaily" target="_blank" class="text-lg font-semibold hover:text-gray-600">Ui Design Daily Clone</a>
             </div>
           </div>
         </div> <!-- end item uidesigndaily -->
