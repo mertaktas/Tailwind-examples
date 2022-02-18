@@ -14,7 +14,7 @@
       "
     >
       <!-- Navbar -->
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between md:space-x-0">
         <div class="flex justify-center items-center">
           <img
             class="pr-2"
@@ -24,7 +24,7 @@
           />
           <span class="font-bold">Design Daily</span>
         </div>
-        <ul class="flex items-center justify-center space-x-1 text-base">
+        <ul class="flex items-center justify-center space-x-1 text-base w-0 lg:w-auto invisible lg:visible">
           <li>
             <a class="px-3 py-2 font-bold bg-blueGray-100 rounded-full" href="#"
               >Free designs</a
@@ -43,9 +43,9 @@
             <a href="#">About</a>
           </li>
         </ul>
-        <div class="space-x-2">
+        <div class="space-x-1 flex">
           <button class="p-3 px-6 font-bold">Log in</button>
-          <button class="p-3 bg-blueGray-800 text-white rounded-lg px-6">
+          <button class="p-3 bg-blueGray-800 text-white rounded-lg">
             Sign Up
           </button>
         </div>
@@ -86,7 +86,7 @@
             available in the formats popular by UI designers.
           </p>
         </div>
-        <div class="pt-6 flex w-1/2 shadow-xl rounded-lg overflow-hidden">
+        <div class="pt-6 flex w-full md:w-1/2 min-w-fit shadow-xl rounded-lg overflow-hidden">
           <div class="relative border-r-2 border-gray-100 w-1/3 mt-4">
             <select
               class="
@@ -103,7 +103,7 @@
               <option value="Free designs">Free designs</option>
             </select>
             <img
-              class="absolute top-2 right-2 pointer-events-none"
+              class="absolute top-3 right-2 pointer-events-none"
               src="@/assets/design-daily/ar.svg"
               alt=""
               srcset=""
@@ -112,7 +112,7 @@
           <div class="relative w-2/3 mt-4">
             <input class="p-2 pl-8 w-full" type="text" placeholder="Search" />
             <img
-              class="absolute top-2 left-2 w-6 h-6 text-gray-100"
+              class="absolute top-3 left-2 w-6 h-6 text-gray-100"
               src="@/assets/design-daily/search.svg"
               alt=""
               srcset=""
